@@ -103,6 +103,12 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\OrderHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrderHistory.Designer.cs">
+      <DependentUpon>OrderHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ProductInfoFull.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +155,9 @@
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrderHistory.resx">
+      <DependentUpon>OrderHistory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProductInfoFull.resx">
       <DependentUpon>ProductInfoFull.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +176,8 @@
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\CoD.Models.Category.datasource" />
+    <None Include="Properties\DataSources\CoD.Models.Order.datasource" />
+    <None Include="Properties\DataSources\CoD.Models.OrderProduct.datasource" />
     <None Include="Properties\DataSources\CoD.Models.Product.datasource" />
     <None Include="Properties\DataSources\CoD.Models.Role.datasource" />
     <None Include="Properties\DataSources\CoD.Models.User.datasource" />

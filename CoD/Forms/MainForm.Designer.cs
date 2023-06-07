@@ -31,10 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.userViewButton = new System.Windows.Forms.Button();
+            this.administratorPanelButton = new System.Windows.Forms.Button();
             this.yourRole = new System.Windows.Forms.Label();
-            this.addUserButton = new System.Windows.Forms.Button();
-            this.AddProductButton = new System.Windows.Forms.Button();
             this.personalDiscountLabel = new System.Windows.Forms.Label();
             this.buttonLogoutMain = new System.Windows.Forms.Button();
             this.FIOlabel = new System.Windows.Forms.Label();
@@ -48,7 +46,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.timer60sec = new System.Windows.Forms.Timer(this.components);
-            this.administratorPanelButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -57,10 +54,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(122)))), ((int)(((byte)(189)))));
             this.panel1.Controls.Add(this.administratorPanelButton);
-            this.panel1.Controls.Add(this.userViewButton);
             this.panel1.Controls.Add(this.yourRole);
-            this.panel1.Controls.Add(this.addUserButton);
-            this.panel1.Controls.Add(this.AddProductButton);
             this.panel1.Controls.Add(this.personalDiscountLabel);
             this.panel1.Controls.Add(this.buttonLogoutMain);
             this.panel1.Controls.Add(this.FIOlabel);
@@ -77,20 +71,20 @@
             this.panel1.Size = new System.Drawing.Size(1924, 196);
             this.panel1.TabIndex = 0;
             // 
-            // userViewButton
+            // administratorPanelButton
             // 
-            this.userViewButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.userViewButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.userViewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.userViewButton.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.userViewButton.Location = new System.Drawing.Point(1466, 10);
-            this.userViewButton.Name = "userViewButton";
-            this.userViewButton.Size = new System.Drawing.Size(146, 40);
-            this.userViewButton.TabIndex = 14;
-            this.userViewButton.Text = "Просмотр сотрудников";
-            this.userViewButton.UseVisualStyleBackColor = true;
-            this.userViewButton.Visible = false;
-            this.userViewButton.Click += new System.EventHandler(this.userViewButton_Click);
+            this.administratorPanelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.administratorPanelButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.administratorPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.administratorPanelButton.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.administratorPanelButton.Location = new System.Drawing.Point(1766, 12);
+            this.administratorPanelButton.Name = "administratorPanelButton";
+            this.administratorPanelButton.Size = new System.Drawing.Size(146, 40);
+            this.administratorPanelButton.TabIndex = 15;
+            this.administratorPanelButton.Text = "Панель администратора";
+            this.administratorPanelButton.UseVisualStyleBackColor = true;
+            this.administratorPanelButton.Visible = false;
+            this.administratorPanelButton.Click += new System.EventHandler(this.administratorPanelButton_Click);
             // 
             // yourRole
             // 
@@ -102,35 +96,6 @@
             this.yourRole.TabIndex = 13;
             this.yourRole.Text = "Роль";
             this.yourRole.Visible = false;
-            // 
-            // addUserButton
-            // 
-            this.addUserButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.addUserButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.addUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addUserButton.Location = new System.Drawing.Point(1618, 51);
-            this.addUserButton.Name = "addUserButton";
-            this.addUserButton.Size = new System.Drawing.Size(146, 40);
-            this.addUserButton.TabIndex = 12;
-            this.addUserButton.Text = "Добавить пользователя";
-            this.addUserButton.UseVisualStyleBackColor = true;
-            this.addUserButton.Visible = false;
-            this.addUserButton.Click += new System.EventHandler(this.addUserButton_Click);
-            // 
-            // AddProductButton
-            // 
-            this.AddProductButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.AddProductButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.AddProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddProductButton.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddProductButton.Location = new System.Drawing.Point(1618, 10);
-            this.AddProductButton.Name = "AddProductButton";
-            this.AddProductButton.Size = new System.Drawing.Size(146, 40);
-            this.AddProductButton.TabIndex = 11;
-            this.AddProductButton.Text = "Добавить товар";
-            this.AddProductButton.UseVisualStyleBackColor = true;
-            this.AddProductButton.Visible = false;
-            this.AddProductButton.Click += new System.EventHandler(this.AddProductButton_Click);
             // 
             // personalDiscountLabel
             // 
@@ -283,21 +248,6 @@
             this.timer60sec.Enabled = true;
             this.timer60sec.Tick += new System.EventHandler(this.timer60sec_Tick);
             // 
-            // administratorPanelButton
-            // 
-            this.administratorPanelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.administratorPanelButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.administratorPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.administratorPanelButton.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.administratorPanelButton.Location = new System.Drawing.Point(1766, 12);
-            this.administratorPanelButton.Name = "administratorPanelButton";
-            this.administratorPanelButton.Size = new System.Drawing.Size(146, 40);
-            this.administratorPanelButton.TabIndex = 15;
-            this.administratorPanelButton.Text = "Панель администратора";
-            this.administratorPanelButton.UseVisualStyleBackColor = true;
-            this.administratorPanelButton.Visible = false;
-            this.administratorPanelButton.Click += new System.EventHandler(this.administratorPanelButton_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,10 +286,7 @@
         private System.Windows.Forms.Label FIOlabel;
         private System.Windows.Forms.Button buttonLogoutMain;
         private System.Windows.Forms.Label personalDiscountLabel;
-        private System.Windows.Forms.Button AddProductButton;
-        private System.Windows.Forms.Button addUserButton;
         private System.Windows.Forms.Label yourRole;
-        private System.Windows.Forms.Button userViewButton;
         private System.Windows.Forms.Button administratorPanelButton;
     }
 }

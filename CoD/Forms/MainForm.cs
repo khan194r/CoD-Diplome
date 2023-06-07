@@ -84,9 +84,6 @@ namespace CoD
             {
                 if (AuthForm.user.RoleID == 2)
                 {
-                    AddProductButton.Visible = true;
-                    addUserButton.Visible = true;
-                    userViewButton.Visible = true;
                     administratorPanelButton.Visible = true;
                 }
                
@@ -204,9 +201,6 @@ namespace CoD
             {
                 if (AuthForm.user.RoleID == 2)
                 {
-                    AddProductButton.Visible = true;
-                    addUserButton.Visible = true;
-                    userViewButton.Visible = true;
                     administratorPanelButton.Visible = true;
                 }
                 flowLayoutPanel1.Controls.Clear();
@@ -237,9 +231,6 @@ namespace CoD
                 registryButtonMain.Visible = true;
                 buttonLogoutMain.Visible = false;
                 personalDiscountLabel.Visible = false;
-                AddProductButton.Visible = false;
-                addUserButton.Visible = false;
-                userViewButton.Visible = false;
                 administratorPanelButton.Visible = false;
                 flowLayoutPanel1.Controls.Clear();
                 SearchAndFindAndMore();
@@ -274,22 +265,20 @@ namespace CoD
         #region Кнопка добавления СОТРУДНИКА
         private void addUserButton_Click(object sender, EventArgs e)
         {
-            AddUserForm registry = new AddUserForm();
-            registry.user = new User();
-            registry.ShowDialog();
+           
         }
 
         private void userViewButton_Click(object sender, EventArgs e)
         {
-            FormUserView userView = new FormUserView();
-            userView.ShowDialog();
+          
         }
         #endregion Кнопка добавления СОТРУДНИКА
 
         private void administratorPanelButton_Click(object sender, EventArgs e)
         {
             AdminForm admfrmm = new AdminForm();
-            admfrmm.Show();           
+            admfrmm.Show();
+            this.Close();
         }
     }
 }
