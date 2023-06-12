@@ -17,8 +17,10 @@ namespace CoD.Forms.Cardss
         {
             InitializeComponent();
         }
+        #region GenerateCard
         public void UserGenerateCardik(User user)
         {
+            label1.Text = user.User_ID.ToString();
             userIDLabel.Text = "Идентификатор пользователя: " + user.User_ID.ToString();
             userLastNameLabel.Text = "Фамилия пользователя: " + user.User_LastName;
             userNameLabel.Text = "Имя пользователя: " + user.User_Name;
@@ -31,7 +33,9 @@ namespace CoD.Forms.Cardss
             userEmailLabel.Text = "Почта пользователя: " + user.User_Email;
             userDiscountLabel.Text = "Скидка пользователя: " + user.User_DiscountBonus.ToString() + "%";
         }
+        #endregion GenerateCard
 
+        #region MouseMove and Leave
         private void UserViewCard_MouseMove(object sender, MouseEventArgs e)
         {
             BackColor = Color.LightGray;
@@ -41,5 +45,6 @@ namespace CoD.Forms.Cardss
         {
             BackColor = Color.White;
         }
+        #endregion MouseMove and Leave
     }
 }

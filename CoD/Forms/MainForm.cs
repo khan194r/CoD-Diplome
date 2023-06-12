@@ -62,12 +62,10 @@ namespace CoD
         }
         #endregion Событие нажатия на карточку товара
 
-        #region Загрузка формы мейн форм
+        #region Загрузка формы MainForm
         private void MainForm_Load(object sender, EventArgs e)
         {
             FIOlabel.Text = "Здравствуйте, Гость";
-
-
             GenerateProductCard(products);
             searchTextBoxMAIN.ForeColor = Color.Gray;
             timer60sec.Interval = 1000;
@@ -77,16 +75,13 @@ namespace CoD
             CATEGORYcombobox.DataSource = alltipe;
             CATEGORYcombobox.SelectedIndex = 0;
             SORTcombobox.SelectedIndex = 0;
-
-          
-
+         
             if (dent == 1 && auto)
             {
                 if (AuthForm.user.RoleID == 2)
                 {
                     administratorPanelButton.Visible = true;
-                }
-               
+                }              
                 personalDiscountLabel.Visible = true;
                 personalDiscountLabel.Text = "Ваша персональная скидка: " + $"{AuthForm.user.User_DiscountBonus}" + "%";
                 FIOlabel.Text = "Здравствуйте, " + $"{AuthForm.user.User_LastName} {AuthForm.user.User_Name} {AuthForm.user.User_MiddleName}";
@@ -97,7 +92,7 @@ namespace CoD
                 registryButtonMain.Visible = false;
             }
         }
-        #endregion Загрузка формы мейн форм
+        #endregion Загрузка формы MainForm
 
         #region Таймер обновления системного времени
         private void timer60sec_Tick(object sender, EventArgs e)
@@ -107,7 +102,7 @@ namespace CoD
         }
         #endregion Таймер обновления системного времени
 
-        #region Ну это SEARCHTEXTBOX
+        #region searchTextBox прекратить ввод
         private void textBox1_Leave(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(searchTextBoxMAIN.Text))
@@ -116,9 +111,9 @@ namespace CoD
                 searchTextBoxMAIN.ForeColor = Color.Gray;
             }
         }
-        #endregion Ну это SEARCHTEXTBOX
+        #endregion searchTextBox прекратить ввод
 
-        #region Ну это SEARCHTEXTBOX тоже
+        #region searchTextBox ввод текста
         private void textBox1_Enter(object sender, EventArgs e)
         {
             if (searchTextBoxMAIN.Text == "Введите для поиска по наименованию...")
@@ -127,9 +122,9 @@ namespace CoD
                 searchTextBoxMAIN.ForeColor = Color.Black;
             }
         }
-        #endregion Ну это SEARCHTEXTBOX тоже
+        #endregion searchTextBox ввод текста
 
-        #region МЕТОД ПОИСКА СОРТИРОВКИ И ФИЛЬТРАЦИИ
+        #region Метод поиска, сортировки и фильтрации
         public void SearchAndFindAndMore()
         {
             List<Product> updatedList = dbcontext.db.Product.ToList();
@@ -163,9 +158,9 @@ namespace CoD
             }
             GenerateProductCard(updatedList);
         }
-        #endregion МЕТОД ПОИСКА СОРТИРОВКИ И ФИЛЬТРАЦИИ
+        #endregion Метод поиска, сортировки и фильтрации
 
-        #region Введенные данные в текст бокс
+        #region TextBox изменение текста
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             
@@ -173,30 +168,31 @@ namespace CoD
                 SearchAndFindAndMore();
             
         }
-        #endregion Введенные данные в текст бокс
+        #endregion TextBox изменение текста
 
-        #region Комбо бокс СМЕНА ИНДЕКСА ЕЩЕ
+        #region ComboBox смена индекса
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
             SearchAndFindAndMore();
         }
-        #endregion Комбо бокс СМЕНА ИНДЕКСА ЕЩЕ
+        #endregion ComboBox смена индекса
 
-        #region Комбо бокс СМЕНА ИНДЕКСА
+        #region ComboBox смена индекса_2
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
             SearchAndFindAndMore();
         }
-        #endregion Комбо бокс СМЕНА ИНДЕКСА
+        #endregion ComboBox смена индекса_2
 
-        #region Кнопка для АВТОРИЗАЦИИ
+        #region Кнопка авторизации
         private void button1_Click(object sender, EventArgs e)
         {
             AuthForm authForm = new AuthForm();
             authForm.ShowDialog();
             this.Hide();
+           
             if (dent == 1 && auto)
             {
                 if (AuthForm.user.RoleID == 2)
@@ -215,70 +211,50 @@ namespace CoD
                 registryButtonMain.Visible = false;
             }
         }
-        #endregion Кнопка для АВТОРИЗАЦИИ
+        #endregion Кнопка авторизации
 
-        #region Кнопка для ДЕАВТОРИЗАЦИИ
+        #region Кнопка деавторизации
         private void button3_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Вы действительно хотите выйти?", "Подтверждение", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
+                Application.Restart();
 
-                AuthForm.user = new User();
-                FIOlabel.Text = "Здравствуйте, Гость";
-                yourRole.Visible = false;
-                AuthButtonMain.Visible = true;
-                registryButtonMain.Visible = true;
-                buttonLogoutMain.Visible = false;
-                personalDiscountLabel.Visible = false;
-                administratorPanelButton.Visible = false;
-                flowLayoutPanel1.Controls.Clear();
-                SearchAndFindAndMore();
+                #region Не рабочий
+                //dent = 0;
+                //auto = false;
+                //AuthForm.user = new User();
+                //FIOlabel.Text = "Здравствуйте, Гость";
+                //yourRole.Visible = false;
+                //AuthButtonMain.Visible = true;
+                //registryButtonMain.Visible = true;
+                //buttonLogoutMain.Visible = false;
+                //personalDiscountLabel.Visible = false;
+                //administratorPanelButton.Visible = false;
+                //flowLayoutPanel1.Controls.Clear();
+                //SearchAndFindAndMore();
+                #endregion Не рабочий
             }
         }
-        #endregion Кнопка для ДЕАВТОРИЗАЦИИ
+        #endregion Кнопка деавторизации
 
-        #region Кнопка регистрации простых КЛИЕНТОВ
+        #region Кнопка регистрации для клиентов
         private void button2_Click(object sender, EventArgs e)
         {
             Registry registry = new Registry();
             registry.user = new User();
             registry.ShowDialog();
         }
-        #endregion Кнопка регистрации простых КЛИЕНТОВ
+        #endregion Кнопка регистрации для клиентов
 
-        #region Кнопка добавления ТОВАРА
-        private void AddProductButton_Click(object sender, EventArgs e)
-        {
-            AddProductForm productForm = new AddProductForm();
-            productForm.product = new Product();
-            productForm.ShowDialog();
-            var alltipe = dbcontext.db.Category.Select(a => a.Category_Name).ToList();
-            alltipe.Insert(0, "Все типы");
-            CATEGORYcombobox.DataSource = alltipe;
-            CATEGORYcombobox.SelectedIndex = 0;
-            flowLayoutPanel1.Controls.Clear();
-            SearchAndFindAndMore();
-        }
-        #endregion Кнопка добавления ТОВАРА
-
-        #region Кнопка добавления СОТРУДНИКА
-        private void addUserButton_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void userViewButton_Click(object sender, EventArgs e)
-        {
-          
-        }
-        #endregion Кнопка добавления СОТРУДНИКА
-
+        #region Кнопка панели администраторов
         private void administratorPanelButton_Click(object sender, EventArgs e)
         {
             AdminForm admfrmm = new AdminForm();
             admfrmm.Show();
             this.Close();
         }
+        #endregion Кнопка панели администраторов
     }
 }

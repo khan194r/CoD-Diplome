@@ -60,12 +60,8 @@ namespace CoD.Forms
 
         #region Кнопка отмены регистрации
         private void button2_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Отменить регистрацию?", "Подтверждение", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-            }
+        {           
+                this.Close();            
         }
         #endregion Кнопка отмены регистрации
 

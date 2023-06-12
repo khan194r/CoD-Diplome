@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.administratorPanelButton = new System.Windows.Forms.Button();
             this.yourRole = new System.Windows.Forms.Label();
             this.personalDiscountLabel = new System.Windows.Forms.Label();
@@ -47,12 +48,14 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.timer60sec = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(122)))), ((int)(((byte)(189)))));
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.administratorPanelButton);
             this.panel1.Controls.Add(this.yourRole);
             this.panel1.Controls.Add(this.personalDiscountLabel);
@@ -68,8 +71,18 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1924, 196);
+            this.panel1.Size = new System.Drawing.Size(1940, 232);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(261, 177);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
             // 
             // administratorPanelButton
             // 
@@ -89,10 +102,10 @@
             // yourRole
             // 
             this.yourRole.AutoSize = true;
-            this.yourRole.Font = new System.Drawing.Font("Calibri", 14.25F);
-            this.yourRole.Location = new System.Drawing.Point(1130, 35);
+            this.yourRole.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.yourRole.Location = new System.Drawing.Point(776, 87);
             this.yourRole.Name = "yourRole";
-            this.yourRole.Size = new System.Drawing.Size(49, 23);
+            this.yourRole.Size = new System.Drawing.Size(55, 26);
             this.yourRole.TabIndex = 13;
             this.yourRole.Text = "Роль";
             this.yourRole.Visible = false;
@@ -100,10 +113,10 @@
             // personalDiscountLabel
             // 
             this.personalDiscountLabel.AutoSize = true;
-            this.personalDiscountLabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.personalDiscountLabel.Location = new System.Drawing.Point(1130, 58);
+            this.personalDiscountLabel.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.personalDiscountLabel.Location = new System.Drawing.Point(776, 113);
             this.personalDiscountLabel.Name = "personalDiscountLabel";
-            this.personalDiscountLabel.Size = new System.Drawing.Size(145, 23);
+            this.personalDiscountLabel.Size = new System.Drawing.Size(160, 26);
             this.personalDiscountLabel.TabIndex = 10;
             this.personalDiscountLabel.Text = "PersonalDiscount";
             this.personalDiscountLabel.Visible = false;
@@ -114,7 +127,7 @@
             this.buttonLogoutMain.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
             this.buttonLogoutMain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogoutMain.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonLogoutMain.Location = new System.Drawing.Point(877, 12);
+            this.buttonLogoutMain.Location = new System.Drawing.Point(270, 12);
             this.buttonLogoutMain.Name = "buttonLogoutMain";
             this.buttonLogoutMain.Size = new System.Drawing.Size(247, 110);
             this.buttonLogoutMain.TabIndex = 9;
@@ -126,30 +139,30 @@
             // FIOlabel
             // 
             this.FIOlabel.AutoSize = true;
-            this.FIOlabel.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FIOlabel.Location = new System.Drawing.Point(1130, 12);
+            this.FIOlabel.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FIOlabel.Location = new System.Drawing.Point(776, 9);
             this.FIOlabel.Name = "FIOlabel";
-            this.FIOlabel.Size = new System.Drawing.Size(48, 23);
+            this.FIOlabel.Size = new System.Drawing.Size(54, 26);
             this.FIOlabel.TabIndex = 8;
             this.FIOlabel.Text = "ФИО";
             // 
             // labelDate
             // 
             this.labelDate.AutoSize = true;
-            this.labelDate.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDate.Location = new System.Drawing.Point(3, 42);
+            this.labelDate.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelDate.Location = new System.Drawing.Point(776, 61);
             this.labelDate.Name = "labelDate";
-            this.labelDate.Size = new System.Drawing.Size(84, 33);
+            this.labelDate.Size = new System.Drawing.Size(66, 26);
             this.labelDate.TabIndex = 7;
             this.labelDate.Text = "Число";
             // 
             // labelTime
             // 
             this.labelTime.AutoSize = true;
-            this.labelTime.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTime.Location = new System.Drawing.Point(3, 9);
+            this.labelTime.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTime.Location = new System.Drawing.Point(776, 35);
             this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(88, 33);
+            this.labelTime.Size = new System.Drawing.Size(68, 26);
             this.labelTime.TabIndex = 6;
             this.labelTime.Text = "Время";
             // 
@@ -165,7 +178,7 @@
             "Сортировка от Я до А",
             "Стоимость по возрастанию",
             "Стоимость по убыванию"});
-            this.SORTcombobox.Location = new System.Drawing.Point(1015, 152);
+            this.SORTcombobox.Location = new System.Drawing.Point(1015, 185);
             this.SORTcombobox.Name = "SORTcombobox";
             this.SORTcombobox.Size = new System.Drawing.Size(500, 41);
             this.SORTcombobox.TabIndex = 5;
@@ -177,7 +190,7 @@
             this.CATEGORYcombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CATEGORYcombobox.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CATEGORYcombobox.FormattingEnabled = true;
-            this.CATEGORYcombobox.Location = new System.Drawing.Point(509, 153);
+            this.CATEGORYcombobox.Location = new System.Drawing.Point(509, 185);
             this.CATEGORYcombobox.Name = "CATEGORYcombobox";
             this.CATEGORYcombobox.Size = new System.Drawing.Size(500, 41);
             this.CATEGORYcombobox.TabIndex = 4;
@@ -187,7 +200,7 @@
             // 
             this.searchTextBoxMAIN.BackColor = System.Drawing.Color.White;
             this.searchTextBoxMAIN.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.searchTextBoxMAIN.Location = new System.Drawing.Point(3, 153);
+            this.searchTextBoxMAIN.Location = new System.Drawing.Point(3, 186);
             this.searchTextBoxMAIN.Name = "searchTextBoxMAIN";
             this.searchTextBoxMAIN.Size = new System.Drawing.Size(500, 40);
             this.searchTextBoxMAIN.TabIndex = 3;
@@ -202,7 +215,7 @@
             this.registryButtonMain.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleTurquoise;
             this.registryButtonMain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registryButtonMain.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.registryButtonMain.Location = new System.Drawing.Point(624, 12);
+            this.registryButtonMain.Location = new System.Drawing.Point(523, 12);
             this.registryButtonMain.Name = "registryButtonMain";
             this.registryButtonMain.Size = new System.Drawing.Size(247, 110);
             this.registryButtonMain.TabIndex = 1;
@@ -216,7 +229,7 @@
             this.AuthButtonMain.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.AuthButtonMain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AuthButtonMain.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AuthButtonMain.Location = new System.Drawing.Point(371, 12);
+            this.AuthButtonMain.Location = new System.Drawing.Point(270, 12);
             this.AuthButtonMain.Name = "AuthButtonMain";
             this.AuthButtonMain.Size = new System.Drawing.Size(247, 110);
             this.AuthButtonMain.TabIndex = 0;
@@ -228,9 +241,9 @@
             // 
             this.panel2.Controls.Add(this.flowLayoutPanel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 196);
+            this.panel2.Location = new System.Drawing.Point(0, 232);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1924, 803);
+            this.panel2.Size = new System.Drawing.Size(1940, 868);
             this.panel2.TabIndex = 1;
             // 
             // flowLayoutPanel1
@@ -240,7 +253,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1924, 803);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1940, 868);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // timer60sec
@@ -252,10 +265,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 999);
+            this.ClientSize = new System.Drawing.Size(1940, 1100);
+            this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1940, 1100);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1918, 1038);
             this.Name = "MainForm";
@@ -265,6 +281,7 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -288,6 +305,7 @@
         private System.Windows.Forms.Label personalDiscountLabel;
         private System.Windows.Forms.Label yourRole;
         private System.Windows.Forms.Button administratorPanelButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

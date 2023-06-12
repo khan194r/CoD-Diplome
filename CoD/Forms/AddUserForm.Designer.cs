@@ -295,6 +295,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(370, 486);
+            this.ControlBox = false;
             this.Controls.Add(user_DiscountBonusLabel1);
             this.Controls.Add(this.user_DiscountBonusNumericUpDown);
             this.Controls.Add(role_IDLabel);

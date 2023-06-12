@@ -14,8 +14,10 @@ namespace CoD.Forms.Cardss
         {
             InitializeComponent();
         }
+        #region Генерация карточек
         public void GenerateDataProductCard(Product product)
         {
+            #region Заполнение данными
             IDlabel.Text = product.Product_ID.ToString();
             productCost.Text = $"Цена: {product.Product_Cost} рублей";
             productName.Text = "Наименование: " + product.Product_Name;
@@ -27,7 +29,9 @@ namespace CoD.Forms.Cardss
                     pictureBox1.Image = Image.FromStream(ms);
                 }
             }
+            #endregion Заполнение данными
 
+            #region if (product.Product_Discount_Percent > 0)
             if (product.Product_Discount_Percent > 0)
             {
                 productDiscount.Visible = true;
@@ -39,7 +43,9 @@ namespace CoD.Forms.Cardss
             }
             productQuanInStock.Text = "Кол-во на складе: " + product.Quantity_in_stock.ToString();
             productCategory.Text = "Категория: " + product.Category.Category_Name;
+            #endregion if (product.Product_Discount_Percent > 0)
 
+            #region if (AuthForm.user.User_DiscountBonus != 0)
             if (AuthForm.user.User_DiscountBonus != 0)
             {
                 productCostDiscount.Visible = true;
@@ -52,7 +58,11 @@ namespace CoD.Forms.Cardss
                 productCost.Font = font;
             }
         }
+        #endregion #region if (AuthForm.user.User_DiscountBonus != 0)
 
+        #endregion Генерация карточек
+
+        #region MouseMove and Leave
         private void ProductCardd_MouseMove(object sender, MouseEventArgs e)
         {
             BackColor = Color.LightGray;
@@ -63,5 +73,6 @@ namespace CoD.Forms.Cardss
         {
             BackColor = Color.White;
         }
-    }    
+        #endregion MouseMove and Leave
+    }
 }

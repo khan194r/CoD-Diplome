@@ -168,12 +168,13 @@
             this.IDlabel.Enabled = false;
             this.IDlabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.IDlabel.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.IDlabel.Location = new System.Drawing.Point(589, 450);
+            this.IDlabel.Location = new System.Drawing.Point(552, 447);
             this.IDlabel.Name = "IDlabel";
             this.IDlabel.Size = new System.Drawing.Size(64, 26);
             this.IDlabel.TabIndex = 15;
             this.IDlabel.Text = "label1";
             this.IDlabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.IDlabel.Visible = false;
             // 
             // ProductCardd
             // 

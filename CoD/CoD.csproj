@@ -91,6 +91,12 @@
     <Compile Include="Forms\Cardss\UserViewCard.Designer.cs">
       <DependentUpon>UserViewCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormUserEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormUserEdit.Designer.cs">
+      <DependentUpon>FormUserEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormUserView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,12 @@
     </Compile>
     <Compile Include="Forms\OrderHistory.Designer.cs">
       <DependentUpon>OrderHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProductEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProductEditForm.Designer.cs">
+      <DependentUpon>ProductEditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ProductInfoFull.cs">
       <SubType>Form</SubType>
@@ -149,6 +161,9 @@
     <EmbeddedResource Include="Forms\Cardss\UserViewCard.resx">
       <DependentUpon>UserViewCard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormUserEdit.resx">
+      <DependentUpon>FormUserEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormUserView.resx">
       <DependentUpon>FormUserView.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\OrderHistory.resx">
       <DependentUpon>OrderHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProductEditForm.resx">
+      <DependentUpon>ProductEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProductInfoFull.resx">
       <DependentUpon>ProductInfoFull.cs</DependentUpon>

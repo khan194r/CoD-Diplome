@@ -40,7 +40,7 @@ namespace CoD.Forms
                 frm.auto = auto;
                 frm.Show();
                 this.Hide();
-                DialogResult = DialogResult.OK;
+              //  DialogResult = DialogResult.OK;
             }
             else
             {
@@ -51,15 +51,14 @@ namespace CoD.Forms
 
         #region Кнопка отмены авторизации
         private void canselbutton_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Отменить авторизацию?", "Подтверждение", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                dent = 0;
-                DialogResult = DialogResult.Cancel;
+        {                  
+               dent = 0;
+            MainForm mai = new MainForm();
+            mai.Show();
+            this.Close();               
             }
         }
         #endregion Кнопка отмены авторизации
     }
-}
+
         

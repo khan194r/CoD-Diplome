@@ -41,9 +41,21 @@ namespace CoD.Forms
                 UserViewCard carde = new UserViewCard();
                 carde.UserGenerateCardik(wara);
                 flowLayoutPanel1.Controls.Add(carde);
+                carde.DoubleClick += Carde_DoubleClick;
             }
         }
         #endregion Генерация карточек пользователей циклом форейч
+
+        #region Двойной клик по карточке
+        private void Carde_DoubleClick(object sender, EventArgs e)
+        {
+            UserViewCard carde = (UserViewCard)sender;
+            FormUserEdit ab = new FormUserEdit();
+            var userse = dbcontext.db.User.FirstOrDefault(a => a.User_ID.ToString() == carde.label1.Text);
+            ab.userUpData = userse;
+            ab.Show();           
+        }
+        #endregion Двойной клик по карточке
 
         #region Загрузка формы
         private void FormUserView_Load(object sender, EventArgs e)
@@ -81,7 +93,7 @@ namespace CoD.Forms
         }
         #endregion Метод поиска и сортировки
 
-        #region Комбо бокс изменение текста и индекса
+        #region ComboBox & SearchTextBox Changed
         private void searchTextBoxmmm_TextChanged(object sender, EventArgs e)
         {
             SEARCH_AND_FIND();
@@ -91,7 +103,7 @@ namespace CoD.Forms
         {
             SEARCH_AND_FIND();
         }
-        #endregion Комбо бокс изменение текста и индекса
+        #endregion ComboBox & SearchTextBox Changed
 
         #region Введите для поиска....ну крч текстбокс
         private void searchTextBoxmmm_Enter(object sender, EventArgs e)

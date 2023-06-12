@@ -32,13 +32,15 @@ namespace CoD.Forms
         #region Загрузка формы
         private void ProductInfoFull_Load(object sender, EventArgs e)
         {
-
-
-
             if (AuthForm.user.RoleID == 2)
             {
                 editProductBUTTOn.Visible = true;
                 deletePRODuctBUTTOn.Visible = true;
+            }
+            else if (AuthForm.user.RoleID == 0)
+            {
+                editProductBUTTOn.Visible = false;
+                deletePRODuctBUTTOn.Visible = false;
             }
 
             productBindingSource.DataSource = productUpData;
@@ -80,5 +82,16 @@ namespace CoD.Forms
             }
         }
         #endregion Кнопка удаления
+
+        #region Кнопка редактирования
+        private void editProductBUTTOn_Click(object sender, EventArgs e)
+        {
+            ProductEditForm ab = new ProductEditForm();           
+            var product = dbcontext.db.Product.FirstOrDefault(a => a.Product_ID.ToString() == productUpData.Product_ID.ToString());
+            ab.productUpData = product;
+            ab.ShowDialog();
+            this.Hide();
+        }
+        #endregion Кнопка редактирования
     }
 }

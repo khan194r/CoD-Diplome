@@ -97,6 +97,7 @@ namespace CoD.Forms
         }
         #endregion КНОПКА ВЫБОРА ИЗОБРАЖЕНИЯ
 
+        #region Ввод цифр
         private void quantity_in_stockTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Только цифры
@@ -105,5 +106,18 @@ namespace CoD.Forms
                 e.Handled = true;
             }
         }
+        #endregion Ввод цифр
+
+        #region Мусор
+        private void categoryIDComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void categoryIDLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion Мусор
     }
 }
